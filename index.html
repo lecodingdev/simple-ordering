@@ -14,17 +14,17 @@
         <div class="pizza1">
           <div>Pizza 1</div>
           <div>$8</div>
-          <div><input type="radio" name="pizza" value="13" onclick="calculatePrice(this); pizzaChoice();"/></div>
+          <div><input type="radio" name="pizza" value="13" onclick="calculatePizza(this); pizzaChoice();"/></div>
         </div>
         <div class="pizza2">
           <div>Pizza 2</div>
           <div>$10</div>
-          <div><input type="radio" name="pizza" value="15" onclick="calculatePrice(this); pizzaChoice();" /></div>
+          <div><input type="radio" name="pizza" value="15" onclick="calculatePizza(this); pizzaChoice();" /></div>
         </div>
         <div class="pizza3">
           <div>Pizza 3</div>
           <div>$12</div>
-          <div><input type="radio" name="pizza" value="17" onclick="calculatePrice(this); pizzaChoice();" /></div>
+          <div><input type="radio" name="pizza" value="17" onclick="calculatePizza(this); pizzaChoice();" /></div>
         </div>
       </div>
 
@@ -51,22 +51,22 @@
       <div>Toppings</div>
       <div class="topping-list">
         <div>
-          <div><input type="checkbox" id="Avocado" value="1" onclick="calculateToppingVegetable(this);"/> Avocado</div>
-          <div><input type="checkbox" id="Broccoli" value="1" onclick="calculateToppingVegetable(this);"/> Broccoli</div>
-          <div><input type="checkbox" id="Onions" value="1" onclick="calculateToppingVegetable(this);"/> Onions</div>
-          <div><input type="checkbox" id="Zucchini" value="1" onclick="calculateToppingVegetable(this);"/> Zucchini</div>
+          <div><input type="checkbox" id="Avocado" onclick="calculateToppingVegetable(this);"/> Avocado</div>
+          <div><input type="checkbox" id="Broccoli" onclick="calculateToppingVegetable(this);"/> Broccoli</div>
+          <div><input type="checkbox" id="Onions" onclick="calculateToppingVegetable(this);"/> Onions</div>
+          <div><input type="checkbox" id="Zucchini" onclick="calculateToppingVegetable(this);"/> Zucchini</div>
         </div>
         <div>
-          <div><input type="checkbox" id="Lobster" value="2" onclick="calculateToppingSeaFood(this);"/> Lobster</div>
-          <div><input type="checkbox" id="Oyster" value="2" onclick="calculateToppingSeaFood(this);"/> Oyster</div>
-          <div><input type="checkbox" id="Salmon" value="2" onclick="calculateToppingSeaFood(this);"/> Salmon</div>
-          <div><input type="checkbox" id="Tuna" value="2" onclick="calculateToppingSeaFood(this);"/> Tuna</div>
+          <div><input type="checkbox" id="Lobster" onclick="calculateToppingSeaFood(this);"/> Lobster</div>
+          <div><input type="checkbox" id="Oyster" onclick="calculateToppingSeaFood(this);"/> Oyster</div>
+          <div><input type="checkbox" id="Salmon" onclick="calculateToppingSeaFood(this);"/> Salmon</div>
+          <div><input type="checkbox" id="Tuna" onclick="calculateToppingSeaFood(this);"/> Tuna</div>
         </div>
         <div>
-          <div><input type="checkbox" id="Bacon" value="3" onclick="calculateToppingMeat(this);"/> Bacon</div>
-          <div><input type="checkbox" id="Duck" value="3" onclick="calculateToppingMeat(this);"/> Duck</div>
-          <div><input type="checkbox" id="Ham" value="3" onclick="calculateToppingMeat(this);"/> Ham</div>
-          <div><input type="checkbox" id="Sausage" value="3" onclick="calculateToppingMeat(this);"/> Sausage</div>
+          <div><input type="checkbox" id="Bacon" onclick="calculateToppingMeat(this);"/> Bacon</div>
+          <div><input type="checkbox" id="Duck" onclick="calculateToppingMeat(this);"/> Duck</div>
+          <div><input type="checkbox" id="Ham" onclick="calculateToppingMeat(this);"/> Ham</div>
+          <div><input type="checkbox" id="Sausage" onclick="calculateToppingMeat(this);"/> Sausage</div>
         </div>
       </div>
 

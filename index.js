@@ -12,7 +12,7 @@ let sizePrice = 0;
 let toppingPrice = 0;
 
 // function of pizza price
-function calculatePrice(element) {
+function calculatePizza(element) {
   if (element == null) {
     return;
   }
