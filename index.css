@@ -1,0 +1,46 @@
+body {
+  margin-left: 14px;
+}
+
+.pizza-list {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 8px;
+  margin-bottom: 30px;
+}
+
+.pizza1 {
+  border: 1px solid black;
+  padding: 32px;
+}
+
+.pizza2 {
+  border: 1px solid black;
+  padding: 32px;
+}
+
+.pizza3 {
+  border: 1px solid black;
+  padding: 32px;
+}
+
+.size-list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.topping-list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.price-list {
+  display: flex;
+}
+
+.total-price-list {
+  display: flex;
+  margin-bottom: 30px;
+}

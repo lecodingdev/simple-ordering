@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza Challenge</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+      <h2>Pizza</h2>
+
+      <!-- Pizza Section -->
+      <div class="pizza-list">
+        <div class="pizza1">
+          <div>Pizza 1</div>
+          <div>$8</div>
+          <div><input type="radio" name="pizza" value="13" onclick="calculatePrice(this); pizzaChoice();"/></div>
+        </div>
+        <div class="pizza2">
+          <div>Pizza 2</div>
+          <div>$10</div>
+          <div><input type="radio" name="pizza" value="15" onclick="calculatePrice(this); pizzaChoice();" /></div>
+        </div>
+        <div class="pizza3">
+          <div>Pizza 3</div>
+          <div>$12</div>
+          <div><input type="radio" name="pizza" value="17" onclick="calculatePrice(this); pizzaChoice();" /></div>
+        </div>
+      </div>
+
+      <!-- Size Section -->
+      <div>
+        <div>Size</div>
+        <div class="size-list">
+          <div>
+            <input type="radio" name="size" value="4" onclick="calculateSize(this);"/>
+            <label for="small">Small </label>
+          </div>
+          <div>
+            <input type="radio" name="size" value="5" checked onclick="calculateSize(this);"/>
+            <label for="medium">Medium</label>
+          </div>
+          <div>
+            <input type="radio" name="size" value="7" onclick="calculateSize(this);"/>
+            <label for="big">Big</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Topping Section -->
+      <div>Toppings</div>
+      <div class="topping-list">
+        <div>
+          <div><input type="checkbox" id="Avocado" value="1" onclick="calculateToppingVegetable(this);"/> Avocado</div>
+          <div><input type="checkbox" id="Broccoli" value="1" onclick="calculateToppingVegetable(this);"/> Broccoli</div>
+          <div><input type="checkbox" id="Onions" value="1" onclick="calculateToppingVegetable(this);"/> Onions</div>
+          <div><input type="checkbox" id="Zucchini" value="1" onclick="calculateToppingVegetable(this);"/> Zucchini</div>
+        </div>
+        <div>
+          <div><input type="checkbox" id="Lobster" value="2" onclick="calculateToppingSeaFood(this);"/> Lobster</div>
+          <div><input type="checkbox" id="Oyster" value="2" onclick="calculateToppingSeaFood(this);"/> Oyster</div>
+          <div><input type="checkbox" id="Salmon" value="2" onclick="calculateToppingSeaFood(this);"/> Salmon</div>
+          <div><input type="checkbox" id="Tuna" value="2" onclick="calculateToppingSeaFood(this);"/> Tuna</div>
+        </div>
+        <div>
+          <div><input type="checkbox" id="Bacon" value="3" onclick="calculateToppingMeat(this);"/> Bacon</div>
+          <div><input type="checkbox" id="Duck" value="3" onclick="calculateToppingMeat(this);"/> Duck</div>
+          <div><input type="checkbox" id="Ham" value="3" onclick="calculateToppingMeat(this);"/> Ham</div>
+          <div><input type="checkbox" id="Sausage" value="3" onclick="calculateToppingMeat(this);"/> Sausage</div>
+        </div>
+      </div>
+
+      <!-- Price Section -->
+      <div>
+        Price
+      </div>
+      <div class="price-list">
+        <div>Pizza Price $</div>
+        <div id="pizza-price" name="pricing">0</div>
+      </div>
+      <div class="price-list">
+        <div>Size Price $</div>
+        <div id="size-price" name="pricing">0</div>
+      </div>
+      <div class="price-list">
+        <div>Topping Price $</div>
+        <div id="topping-price" name="pricing">0</div>
+      </div>
+      <div class="total-price-list">
+        <div>Total Price $</div>
+        <div id="total-price" name="pricing">0</div>
+      </div>
+    <script src="index.js"></script>
+  </body>
+</html>
