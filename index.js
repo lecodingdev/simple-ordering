@@ -1,41 +1,56 @@
-const smallPizza = 8;
-const mediumPizza = 10;
-const largePizza = 12;
+const pizzaType1 = 8;
+const pizzaType2 = 10;
+const pizzaType3 = 12;
 const smallSize = -1;
 const mediumSize = 0;
 const bigSize = 2;
 const toppingVegetable = 1;
 const toppingSeaFood = 2;
 const toppingMeat = 3;
+
 let pizzaPrice = 0;
 let sizePrice = 0;
 let toppingPrice = 0;
 
-// function of pizza price
-function calculatePizza(element) {
+/**
+ * Calculate pizza type based on the given input.
+ *
+ * @param {*} element
+ */
+function calculatePizzaType(element) {
   if (element == null) {
     return;
   }
 
   switch (element.value) {
-    case "13":
-      pizzaPrice = smallPizza;
+    case "pizzaType1":
+      pizzaPrice = pizzaType1;
       break;
-    case "15":
-      pizzaPrice = mediumPizza;
+    case "pizzaType2":
+      pizzaPrice = pizzaType2;
       break;
-    case "17":
-      pizzaPrice = largePizza;
+    case "pizzaType3":
+      pizzaPrice = pizzaType3;
       break;
   }
+
+  // alternative version of switch statement.
+  // pizzaPrice = {
+  //   "pizzaType1": smallPizza,
+  //   "pizzaType2": mediumPizza,
+  //   "pizzaType3": largePizza,
+  // }[element.value];
+
   calculateTotal();
 };
 
-// function of pizza choice of toppings
-function pizzaChoice() {
-  const menu = document.querySelectorAll('input[name="pizza"]');
-  const dis = [];
-  let topping = [
+/**
+ * Enable or disable list of pizza topping based on the given pizza type.
+ */
+function enablePizzaTopppingOptions() {
+  const selectedPizzaType = document.querySelectorAll('input[name="pizzaType"]');
+  let disabledToppings = [];
+  const availableToppings = [
     "Lobster",
     "Broccoli",
     "Onions",
@@ -49,91 +64,100 @@ function pizzaChoice() {
     "Avocado",
     "Tuna",
   ];
-  for (let value of topping) {
-    document.getElementById(value).disabled = false;
+
+  for (let availableTopping of availableToppings) {
+    document.getElementById(availableTopping).disabled = false;
   }
 
-  if (menu[0].checked || menu[1].checked || menu[2].checked) {
-    if (menu[0].checked) {
-      let dis = ["Lobster", "Oyster", "Salmon", "Bacon", "Duck", "Sausage"];
-      for (let value of dis) {
-        document.getElementById(value).disabled = true;
-      }
+  if (selectedPizzaType[0].checked || selectedPizzaType[1].checked || selectedPizzaType[2].checked) {
+    if (selectedPizzaType[0].checked) {
+      disabledToppings = ["Lobster", "Oyster", "Salmon", "Bacon", "Duck", "Sausage"];
+    } else if (selectedPizzaType[1].checked) {
+      disabledToppings = ["Avocado", "Tuna", "Duck", "Sausage"];
+    } else if (selectedPizzaType[2].checked) {
+      disabledToppings = ["Avocado", "Lobster", "Oyster", "Salmon"];
     }
-
-    if (menu[1].checked) {
-      let dis = ["Avocado", "Tuna", "Duck", "Sausage"];
-      for (let value of dis) {
-        document.getElementById(value).disabled = true;
-      }
-    }
-
-    if (menu[2].checked) {
-      let dis = ["Avocado", "Lobster", "Oyster", "Salmon"];
-      for (let value of dis) {
-        document.getElementById(value).disabled = true;
-      }
+  
+    for (let disabledTopping of disabledToppings) {
+      document.getElementById(disabledTopping).disabled = true;
     }
   }
-};
+}
 
-// function of size price
-function calculateSize(element) {
+/**
+ * Calculate pizza size based on the given input.
+ *
+ * @param {*} element
+ */
+function calculatePizzaSize(element) {
   if (element == null) {
     return;
   }
 
   switch (element.value) {
-    case "4":
+    case "smallSize":
       sizePrice = smallSize;
       break;
-    case "5":
+    case "mediumSize":
       sizePrice = mediumSize;
       break;
-    case "7":
+    case "bigSize":
       sizePrice = bigSize;
       break;
   }
+
+  // alternative version of switch statement.
+  // sizePrice = {
+  //   "smallSize": smallSize,
+  //   "mediumSize": mediumSize,
+  //   "bigSize": largeSize,
+  // }[element.value];
+
   calculateTotal();
 };
 
-// function of toppings $1
+/**
+ * function of toppings $1.
+ */
 function calculateToppingVegetable(element) {
-  if (element.checked) {
-       toppingPrice += toppingVegetable;
-  } else {
-      toppingPrice -= toppingVegetable;
-  }
-    calculateTotal();
+  toppingPrice = element.checked
+    ? toppingPrice + toppingVegetable
+    : toppingPrice - toppingVegetable;
+
+  calculateTotal();
 };
 
-// function of toppings $0
+/**
+ * function of toppings $2.
+ */
 function calculateToppingSeaFood(element) {
-  if (element.checked) {
-       toppingPrice += toppingSeaFood;
-  } else {
-      toppingPrice -= toppingSeaFood;
-  }
-    calculateTotal();
+  toppingPrice = element.checked
+    ? toppingPrice + toppingSeaFood
+    : toppingPrice - toppingSeaFood;
+
+  calculateTotal();
 };
 
-// function of toppings $2
+/**
+ * function of toppings $3.
+ */
 function calculateToppingMeat(element) {
-  if (element.checked) {
-       toppingPrice += toppingMeat;
-  } else {
-      toppingPrice -= toppingMeat;
-  }
-    calculateTotal();
+  toppingPrice = element.checked
+  ? toppingPrice + toppingMeat
+  : toppingPrice - toppingMeat;
+
+  calculateTotal();
 };
 
-// function of price
+/**
+ * calculate total price
+ */
+
 function calculateTotal() {
   let total = pizzaPrice + sizePrice + toppingPrice;
+
   document.getElementById("total-price").innerHTML = total;
   document.getElementById("pizza-price").innerHTML = pizzaPrice;
   document.getElementById("size-price").innerHTML = sizePrice;
   document.getElementById("topping-price").innerHTML = toppingPrice;
 };
-
-

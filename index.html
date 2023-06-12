@@ -14,17 +14,17 @@
         <div class="pizza1">
           <div>Pizza 1</div>
           <div>$8</div>
-          <div><input type="radio" name="pizza" value="13" onclick="calculatePizza(this); pizzaChoice();"/></div>
+          <div><input type="radio" name="pizzaType" value="pizzaType1" onclick="calculatePizzaType(this); enablePizzaTopppingOptions();"/></div>
         </div>
         <div class="pizza2">
           <div>Pizza 2</div>
           <div>$10</div>
-          <div><input type="radio" name="pizza" value="15" onclick="calculatePizza(this); pizzaChoice();" /></div>
+          <div><input type="radio" name="pizzaType" value="pizzaType2" onclick="calculatePizzaType(this); enablePizzaTopppingOptions();" /></div>
         </div>
         <div class="pizza3">
           <div>Pizza 3</div>
           <div>$12</div>
-          <div><input type="radio" name="pizza" value="17" onclick="calculatePizza(this); pizzaChoice();" /></div>
+          <div><input type="radio" name="pizzaType" value="pizzaType3" onclick="calculatePizzaType(this); enablePizzaTopppingOptions();" /></div>
         </div>
       </div>
 
@@ -33,15 +33,15 @@
         <div>Size</div>
         <div class="size-list">
           <div>
-            <input type="radio" name="size" value="4" onclick="calculateSize(this);"/>
+            <input type="radio" name="pizzaSize" value="smallSize" onclick="calculatePizzaSize(this);"/>
             <label for="small">Small </label>
           </div>
           <div>
-            <input type="radio" name="size" value="5" checked onclick="calculateSize(this);"/>
+            <input type="radio" name="pizzaSize" value="mediumSize" checked onclick="calculatePizzaSize(this);"/>
             <label for="medium">Medium</label>
           </div>
           <div>
-            <input type="radio" name="size" value="7" onclick="calculateSize(this);"/>
+            <input type="radio" name="pizzaSize" value="bigSize" onclick="calculatePizzaSize(this);"/>
             <label for="big">Big</label>
           </div>
         </div>
