@@ -67,6 +67,8 @@ function enablePizzaTopppingOptions() {
 
   for (let availableTopping of availableToppings) {
     document.getElementById(availableTopping).disabled = false;
+    document.getElementById(availableTopping).checked = false;
+  
   }
 
   if (selectedPizzaType[0].checked || selectedPizzaType[1].checked || selectedPizzaType[2].checked) {
@@ -80,7 +82,10 @@ function enablePizzaTopppingOptions() {
   
     for (let disabledTopping of disabledToppings) {
       document.getElementById(disabledTopping).disabled = true;
+      document.getElementById(disabledTopping).checked = true;
+      toppingPrice = 0;
     }
+    calculateTotal();
   }
 }
 
