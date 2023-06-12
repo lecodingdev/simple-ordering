@@ -107,7 +107,7 @@ function calculateToppingVegetable(element) {
     calculateTotal();
 };
 
-// function of toppings $0
+// function of toppings $2
 function calculateToppingSeaFood(element) {
   if (element.checked) {
        toppingPrice += toppingSeaFood;
@@ -117,7 +117,7 @@ function calculateToppingSeaFood(element) {
     calculateTotal();
 };
 
-// function of toppings $2
+// function of toppings $3
 function calculateToppingMeat(element) {
   if (element.checked) {
        toppingPrice += toppingMeat;
