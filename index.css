@@ -2,7 +2,8 @@ body {
   margin-left: 14px;
   background-image: url("https://img.freepik.com/premium-photo/tasty-pepperoni-pizza-black-concrete-background_79782-102.jpg");
   background-size: cover;
-
+  width: 100%;
+  min-height: 200px;
 }
 
 .content-container {
@@ -54,7 +55,6 @@ body {
   display: flex;
   margin-bottom: 30px;
 }
-
 
 .social-icons {
   display: flex;
