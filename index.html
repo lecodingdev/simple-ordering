@@ -5,91 +5,230 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza Challenge</title>
     <link rel="stylesheet" href="index.css" />
+    <script src="https://kit.fontawesome.com/0a68de64a7.js" crossorigin="anonymous"></script>
   </head>
   <body>
-      <h2>Pizza</h2>
-
-      <!-- Pizza Section -->
-      <div class="pizza-list">
-        <div class="pizza1">
-          <div>Pizza 1</div>
-          <div>$8</div>
-          <div><input type="radio" name="pizzaType" value="pizzaType1" onclick="calculatePizzaType(this); enablePizzaTopppingOptions();"/></div>
-        </div>
-        <div class="pizza2">
-          <div>Pizza 2</div>
-          <div>$10</div>
-          <div><input type="radio" name="pizzaType" value="pizzaType2" onclick="calculatePizzaType(this); enablePizzaTopppingOptions();" /></div>
-        </div>
-        <div class="pizza3">
-          <div>Pizza 3</div>
-          <div>$12</div>
-          <div><input type="radio" name="pizzaType" value="pizzaType3" onclick="calculatePizzaType(this); enablePizzaTopppingOptions();" /></div>
+    <div class="content-container">
+      <div class="profile">
+        <img src="./assets/LeCodingDev.jpeg" />
+        <div class="social-icons">
+          <a href="https://github.com/lecodingdev">
+            <i class="fa fa-github fa-2x color:#000000" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.youtube.com/@lecodingdev">
+            <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+          </a>
+          <a href="https://lecodingdev.medium.com/">
+            <i class="fa fa-pencil fa-2x" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
 
-      <!-- Size Section -->
-      <div>
-        <div>Size</div>
-        <div class="size-list">
+      <div class="form-order">
+        <h2>Pizza</h2>
+
+        <!-- Pizza Section -->
+        <div class="pizza-list">
+          <div class="pizza1">
+            <div>Pizza 1</div>
+            <div>$8</div>
+            <div>
+              <input
+                type="radio"
+                name="pizzaType"
+                value="pizzaType1"
+                onclick="calculatePizzaType(this); enablePizzaTopppingOptions();"
+              />
+            </div>
+          </div>
+          <div class="pizza2">
+            <div>Pizza 2</div>
+            <div>$10</div>
+            <div>
+              <input
+                type="radio"
+                name="pizzaType"
+                value="pizzaType2"
+                onclick="calculatePizzaType(this); enablePizzaTopppingOptions();"
+              />
+            </div>
+          </div>
+          <div class="pizza3">
+            <div>Pizza 3</div>
+            <div>$12</div>
+            <div>
+              <input
+                type="radio"
+                name="pizzaType"
+                value="pizzaType3"
+                onclick="calculatePizzaType(this); enablePizzaTopppingOptions();"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Size Section -->
+        <div>
+          <div>Size</div>
+          <div class="size-list">
+            <div>
+              <input
+                type="radio"
+                name="pizzaSize"
+                value="smallSize"
+                onclick="calculatePizzaSize(this);"
+              />
+              <label for="smallSize">Small </label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="pizzaSize"
+                value="mediumSize"
+                checked
+                onclick="calculatePizzaSize(this);"
+              />
+              <label for="mediumSize">Medium</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="pizzaSize"
+                value="bigSize"
+                onclick="calculatePizzaSize(this);"
+              />
+              <label for="bigSize">Big</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Topping Section -->
+        <div>Toppings</div>
+        <div class="topping-list">
           <div>
-            <input type="radio" name="pizzaSize" value="smallSize" onclick="calculatePizzaSize(this);"/>
-            <label for="smallSize">Small </label>
+            <div>
+              <input
+                type="checkbox"
+                id="Avocado"
+                onclick="calculateToppingVegetable(this);"
+              />
+              Avocado
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Broccoli"
+                onclick="calculateToppingVegetable(this);"
+              />
+              Broccoli
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Onions"
+                onclick="calculateToppingVegetable(this);"
+              />
+              Onions
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Zucchini"
+                onclick="calculateToppingVegetable(this);"
+              />
+              Zucchini
+            </div>
           </div>
           <div>
-            <input type="radio" name="pizzaSize" value="mediumSize" checked onclick="calculatePizzaSize(this);"/>
-            <label for="mediumSize">Medium</label>
+            <div>
+              <input
+                type="checkbox"
+                id="Lobster"
+                onclick="calculateToppingSeaFood(this);"
+              />
+              Lobster
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Oyster"
+                onclick="calculateToppingSeaFood(this);"
+              />
+              Oyster
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Salmon"
+                onclick="calculateToppingSeaFood(this);"
+              />
+              Salmon
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Tuna"
+                onclick="calculateToppingSeaFood(this);"
+              />
+              Tuna
+            </div>
           </div>
           <div>
-            <input type="radio" name="pizzaSize" value="bigSize" onclick="calculatePizzaSize(this);"/>
-            <label for="bigSize">Big</label>
+            <div>
+              <input
+                type="checkbox"
+                id="Bacon"
+                onclick="calculateToppingMeat(this);"
+              />
+              Bacon
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Duck"
+                onclick="calculateToppingMeat(this);"
+              />
+              Duck
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Ham"
+                onclick="calculateToppingMeat(this);"
+              />
+              Ham
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="Sausage"
+                onclick="calculateToppingMeat(this);"
+              />
+              Sausage
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Topping Section -->
-      <div>Toppings</div>
-      <div class="topping-list">
-        <div>
-          <div><input type="checkbox" id="Avocado" onclick="calculateToppingVegetable(this);"/> Avocado</div>
-          <div><input type="checkbox" id="Broccoli" onclick="calculateToppingVegetable(this);"/> Broccoli</div>
-          <div><input type="checkbox" id="Onions" onclick="calculateToppingVegetable(this);"/> Onions</div>
-          <div><input type="checkbox" id="Zucchini" onclick="calculateToppingVegetable(this);"/> Zucchini</div>
+        <!-- Price Section -->
+        <div>Price</div>
+        <div class="price-list">
+          <div>Pizza Price $</div>
+          <div id="pizza-price" name="pricing">0</div>
         </div>
-        <div>
-          <div><input type="checkbox" id="Lobster" onclick="calculateToppingSeaFood(this);"/> Lobster</div>
-          <div><input type="checkbox" id="Oyster" onclick="calculateToppingSeaFood(this);"/> Oyster</div>
-          <div><input type="checkbox" id="Salmon" onclick="calculateToppingSeaFood(this);"/> Salmon</div>
-          <div><input type="checkbox" id="Tuna" onclick="calculateToppingSeaFood(this);"/> Tuna</div>
+        <div class="price-list">
+          <div>Size Price $</div>
+          <div id="size-price" name="pricing">0</div>
         </div>
-        <div>
-          <div><input type="checkbox" id="Bacon" onclick="calculateToppingMeat(this);"/> Bacon</div>
-          <div><input type="checkbox" id="Duck" onclick="calculateToppingMeat(this);"/> Duck</div>
-          <div><input type="checkbox" id="Ham" onclick="calculateToppingMeat(this);"/> Ham</div>
-          <div><input type="checkbox" id="Sausage" onclick="calculateToppingMeat(this);"/> Sausage</div>
+        <div class="price-list">
+          <div>Topping Price $</div>
+          <div id="topping-price" name="pricing">0</div>
+        </div>
+        <div class="total-price-list">
+          <div>Total Price $</div>
+          <div id="total-price" name="pricing">0</div>
         </div>
       </div>
-
-      <!-- Price Section -->
-      <div>
-        Price
-      </div>
-      <div class="price-list">
-        <div>Pizza Price $</div>
-        <div id="pizza-price" name="pricing">0</div>
-      </div>
-      <div class="price-list">
-        <div>Size Price $</div>
-        <div id="size-price" name="pricing">0</div>
-      </div>
-      <div class="price-list">
-        <div>Topping Price $</div>
-        <div id="topping-price" name="pricing">0</div>
-      </div>
-      <div class="total-price-list">
-        <div>Total Price $</div>
-        <div id="total-price" name="pricing">0</div>
-      </div>
+    </div>
     <script src="index.js"></script>
   </body>
 </html>
