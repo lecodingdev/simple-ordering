@@ -41,10 +41,17 @@ body {
   margin-bottom: 30px;
 }
 
+.topping-pricing {
+  font-size: xx-large;
+  text-align: center;
+  margin: 0;
+}
+
 .topping-list {
   display: flex;
   justify-content: space-around;
   margin-bottom: 30px;
+  align-items: center;
 }
 
 .price-list {
@@ -71,4 +78,11 @@ body {
     flex-direction: column;
   }
   
+  .profile {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
 }
